@@ -1,13 +1,19 @@
 #!/usr/bin/python
 # -*- encoding: UTF-8 -*-
 
-def main():
-    print('Hello world')
+def welcome(nombre):
+    print('Hello world', nombre)
     edad = int(input('How old are you? '))
     print('You are young', edad)
+    # Import script hey
+    from hey import status as f
+    x = f(nombre, edad)
+    print(x)
 
-    print('Anithing else')
-    print('hey')
+
+def main():
+    nombre = input('Nombre: ')
+    welcome(nombre)
 
 
 if __name__ == '__main__':
